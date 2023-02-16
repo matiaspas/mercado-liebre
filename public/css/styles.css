@@ -1,166 +1,302 @@
-* {
-  margin: 0px;
-  padding: 0px;
-}
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Roboto', sans-serif;
+
+}
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: #ebebeb;
+    background-color: #ebebeb;
+}
+a {
+    color: #000;
 }
 
-h3 {
-  font-size: 24px;
-}
+header{
+    background-color:#EAC926;
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
 
-p {
-  font-size: 12px;
 }
-div.top-header {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5%;
-}
-
-header {
-  background-color: #eac926;
-}
-
-header div.logo,
-header .form {
-  width: 50%;
-}
-
-header div.logo {
-  padding: 10px;
-}
-header nav {
-  font-size: 12px;
-}
-
-header ul li {
-  list-style-type: none;
-}
-
-header ul li a {
-  text-decoration: none;
-  color: #000;
-}
-
-header .form {
-  display: flex;
-  align-items: center;
-  padding: 2px;
-  font-size: 11px;
-}
-
-header .form .input {
-  background-color: #fff;
-  border: 1px solid #000;
-  outline: none;
-  color: #666;
-  padding: 2px;
-}
-header .form .submit {
-  background-color: #fff;
-  border: 1px solid #000;
-  color: #666;
-  width: 10%;
-}
-
-header div.top-header p {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-}
-
-div.burger-menu {
-  text-align: center;
-}
-
-div.burger-menu i {
-  background-color: #0044aa;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 20px;
-  height: 40px;
-  margin: 10px 0px 20px 0px;
-  padding: 10px;
-  width: 40px;
-}
-
-article div.main-article {
-  border-top: solid 1px #ebebeb;
-  padding: 15px;
-}
-
-.price {
-  font-size: 18px;
-}
-
-.discount,
-.description {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-h3,
-.description {
-  color: #666;
-}
-
-section.banner img {
-  width: 100%;
-}
-
-main {
-  width: 90%;
-  margin: auto;
-}
-
-main section article {
-  background-color: #fff;
-  margin-bottom: 16px;
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-
-main section article img {
-  width: 100%;
-}
-
-main section article i,
-.discount {
-  color: #39b54a;
-}
-
-@media (min-width: 481px) {
-  main section article .description {
-    display: block;
-  }
-
-  main section article {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
-
-  main section div.products {
+.main-header{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
-  }
-
-  main section div.products article {
-    flex-basis: 48%;
-  }
-
-  .price,
-  .discount {
-    width: 50%;
-  }
+    flex-direction: column;
+    width: 100%;
 }
 
-@media (min-width: 769px) {
-  main section div.products article {
-    flex-basis: 24%;
-  }
+
+.logo-busqueda{
+    display: flex;
+    gap: 40px;
+}
+.logo-conteiner{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+.logo {
+    padding: 20px;
+}
+.search-button-conteiner{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+.barra-de-busqueda{
+    display: flex;
+    width: 100%;
+}
+.fa-search{
+    width: 100%;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.busqueda{                /*barra de busqueda*/
+    width: 95%;
+    border: none;
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+}
+.lupa{
+    width: 15%;
+    padding: 1px;
+    border: none;
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+}
+.car-conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.compracuota {
+    font-weight: 300;    /*grosor de letra*/             
+    text-align: center;
+    font-size: 15px;
+}
+.compracuota i{
+    margin-right: 10px;
+}
+.burguer-conteiner{               /*CONTENEDOR HAMBURGUESA*/
+    display: flex;
+    justify-content: center;
+}
+.burger-menu{                            
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    align-items: center;
+    height: 40px;
+    border-radius: 5px;
+    color: white; 
+    background-color: blue;
+}
+
+.main-navbar{             /* MENU NAVEGACION */
+    display: none;
+}
+
+.left-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.left-navbar a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 15px;
+
+}
+
+.right-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.right-navbar a {
+    text-decoration: none;
+    display: inline-block;
+    color: #222222;
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+.banner {
+    width: 100%;
+    margin: auto;
+}
+
+h3.titular {
+    font-size: 25px;
+    margin: 25px;
+    color: gray;
+}
+
+.precio p{
+    font-size: 16px;
+    line-height: 50%;
+    margin: 10px 0;  
+    
+}
+.precio{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+.descuento {
+    font-size: 18px;
+    color: rgb(3, 145, 3);
+    line-height: 50%;
+    margin: 10px;
+}
+
+.descripcion   {
+    font-size: 16px;
+    line-height: 50%;
+    margin: 10px 0;
+    text-align: left;
+    color: gray;
+    font-weight: 400;
+}
+
+
+
+
+.main-conteiner {
+    text-align: center;
+    width: 90%;
+    margin: auto;  /*10px */
+}
+.fa-truck-fast{              /*camion envio*/
+    color: green;
+    border: solid;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 10px 0;
+    line-height: 100%;
+
+}
+
+
+ 
+.cafetera {
+    width: 100%;
+    
+    
+}
+
+.mac {
+    width: 100%;
+    
+    
+}
+
+.galaxys10 {
+    width: 100%;
+    
+    
+}
+
+.tvsamsung {
+    width: 100%;
+    
+    
+}
+
+.info{
+    background-color: white;
+    padding: 15px;
+    border-top: solid #ebebeb 1px;
+   
+}
+
+h4{
+    display: none;
+}
+main section article:hover .descripcion{
+    display: block;
+}
+
+
+footer i.fa-solid{
+    color: blue;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+
+}
+
+footer{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.juntarprecio{
+    display: flex;
+    margin: 0 10px;
+
+}
+
+                          /* FOOTER */
+.main-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    gap: 30px;
+}
+.info-footer-conteiner{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card-conteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    gap: 10px ;
+
+}
+.envio-conteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    gap: 10px ;
+
+}
+.seguridad-conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 10px ;
+
+}
+.copi-conteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px;
+
 }
